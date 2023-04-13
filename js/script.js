@@ -1,5 +1,7 @@
 // Js train ticket 
-// event for the button  send
+// event for the button generate 
+
+alert("Hello, welcome to the train ticket generator. Please fill in the form to generate your ticket. Thank you!");
 
 var btnGenerate = document.getElementById("generate");
 btnGenerate.addEventListener("click",
@@ -10,7 +12,6 @@ btnGenerate.addEventListener("click",
 
         var km = document.getElementById("km").value;
         console.log("km distance generation:", km);
-
 
         var age = document.getElementById("age").value;
         console.log("age generation:", age);
@@ -53,24 +54,24 @@ btnGenerate.addEventListener("click",
 )
 
 
-// // event for the button cancel
+// event for the button cancel
 
-// var btnGenerate = document.getElementById("cancel");
-// btnGenerate.addEventListener("click",
-//     function () {
-//         // null value
-//         document.getElementById("name").value = "";
-//         document.getElementById("km").value = "";
-//         document.getElementById("age").value = "";
+var btnGenerate = document.getElementById("cancel");
+btnGenerate.addEventListener("click",
+    function () {
+        // null value
+        document.getElementById("name").value = "";
+        document.getElementById("km").value = "";
+        document.getElementById("age").value = "";
 
-//         document.getElementById("passenger").innerHTML = "";
-//         document.getElementById("discount").innerHTML = "";
-//         document.getElementById("ticket-price").innerHTML = "";
-//         document.getElementById("wagon").innerHTML = "";
-//         document.getElementById("cp-code").innerHTML = "";
+        document.getElementById("passenger").innerHTML = "";
+        document.getElementById("discount").innerHTML = "";
+        document.getElementById("ticket-price").innerHTML = "";
+        document.getElementById("wagon").innerHTML = "";
 
-//         // ticket not show 
-//         document.getElementById("ticket-section").className = "bottom hidden";
-//     }
+        // ticket not show 
+        document.getElementById("ticket-section").className = "bottom hidden";
+    }
 
-// )
+)
+
