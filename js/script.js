@@ -1,6 +1,11 @@
 // Js train ticket 
 // event for the button generate 
 
+// prevent the form to be submitted
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
+
 alert("Hello, welcome to the train ticket generator. Please fill in the form to generate your ticket. Thank you!");
 
 var btnGenerate = document.getElementById("generate");
@@ -50,7 +55,7 @@ btnGenerate.addEventListener("click",
 
         // ticket show
         document.getElementById("ticket-section").className = "bottom show";
-    }   
+    }          
 )
 
 
