@@ -15,12 +15,12 @@ btnGenerate.addEventListener("click",
         var passengerName = document.getElementById("name").value;
         console.log("passenger name generation:", passengerName);
 
-        var km = document.getElementById("km").value;
-        console.log("km distance generation:", km);
-
         var age = document.getElementById("age").value;
         console.log("age generation:", age);
 
+        var km = document.getElementById("km").value;
+        console.log("km distance generation:", km);
+        
         var ticketPrice = Math.floor(km * 0.21);
         var discount;
         var discountType;
@@ -52,9 +52,6 @@ btnGenerate.addEventListener("click",
         var wagonNumber = Math.floor(Math.random() * 9) + 1;
         console.log("wagon number generator:", wagonNumber);
         document.getElementById("wagon").innerHTML = wagonNumber;
-
-        // ticket show
-        document.getElementById("ticket-section").className = "bottom show";
     }          
 )
 
@@ -73,10 +70,6 @@ btnGenerate.addEventListener("click",
         document.getElementById("discount").innerHTML = "";
         document.getElementById("ticket-price").innerHTML = "";
         document.getElementById("wagon").innerHTML = "";
-
-        // ticket not show 
-        document.getElementById("ticket-section").className = "bottom hidden";
     }
-
 )
 
