@@ -27,10 +27,10 @@ btnGenerate.addEventListener("click",
         console.log("full price ticket", ticketPrice);
 
         // age discount
-        if (age == "minor") {
+        if (age == "Minor") {
             discount = ticketPrice * 0.2; 
             discountType = "Minor price";
-        } else if (age =="over65") {
+        } else if (age =="Over-65") {
             discount = ticketPrice * 0.4;
             discountType = "Over 65 price";
         } else {
