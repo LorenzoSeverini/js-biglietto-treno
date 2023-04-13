@@ -6,6 +6,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 });
 
+// let numeroFormattato = numero.toFixed(1);
+
 alert("Hello, welcome to the train ticket generator. Please fill in the form to generate your ticket. Thank you!");
 
 var btnGenerate = document.getElementById("generate");
@@ -27,6 +29,7 @@ btnGenerate.addEventListener("click",
         console.log("full price ticket", ticketPrice);
 
         // age discount
+        
         if (age == "Minor") {
             discount = ticketPrice * 0.2; 
             discountType = "Minor price";
@@ -39,7 +42,7 @@ btnGenerate.addEventListener("click",
         }
 
         // ticket price
-        var finalPrice = ticketPrice - discount;
+        var finalPrice = (ticketPrice - discount).toFixed(2);
         console.log("Discount price:", discount);
         console.log("Final ticket price:", finalPrice);
         console.log("Discount type:", discountType);
