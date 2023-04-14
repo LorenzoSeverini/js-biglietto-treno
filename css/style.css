@@ -6,3 +6,19 @@
 }
 
 .MyBgPrimary { background-color: #916f66;}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.myCardEffect {
+    -webkit-box-shadow: -2px 6.5px 16.5px 0.5px #2a1f1f;
+    -moz-box-shadow: -2px 6.5px 16.5px 0.5px #2a1f1f;
+    box-shadow: -2px 6.5px 16.5px 0.5px #2a1f1f;
+    transition: all 0.3s;
+}
+
+.myCardEffect:hover {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
