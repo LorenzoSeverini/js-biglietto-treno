@@ -6,21 +6,68 @@ document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 });
 
-// let numeroFormattato = numero.toFixed(1);
-// how to change the alert format?
+// reload the page on click header link 
+const myLink = document.getElementById('myLink');
 
+myLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default behavior of following the link
+    location.reload(); // Reload the page
+});
+
+// alert for the user 
 alert("Hello, welcome to the train ticket generator. Please fill in the form to generate your ticket. Thank you!");
 
+// event for the button generate
 var btnGenerate = document.getElementById("generate");
 btnGenerate.addEventListener("click",
     
     function () {
+        // passenger name
         var passengerName = document.getElementById("name").value;
-        
+
+        // name validation
+        if (passengerName == "") {
+            alert("Please insert a valid name");
+        } else if (passengerName.length < 3) {
+            alert("Please insert a valid name");
+        } else if (passengerName.length > 40) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("1")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("2")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("3")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("4")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("5")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("6")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("7")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("8")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("9")) {
+            alert("Please insert a valid name");
+        } else if (passengerName.includes("0")) {
+            alert("Please insert a valid name");
+        } else {
+
+        // passenger age
         var age = document.getElementById("age").value;
-    
+
+        if (age == "") {
+            alert("Please insert a valid age");
+        } else {
+
+        // number of km
         var km = document.getElementById("km").value;
         
+        if( isNaN(km) || km < 1) {
+            alert("Please insert a valid number of km");
+        } else {
+
         // ticket price calculation
         var ticketPrice = Math.floor(km * 0.21);
         var discount;
@@ -49,9 +96,8 @@ btnGenerate.addEventListener("click",
         var wagonNumber = Math.floor(Math.random() * 9) + 1;
         
         document.getElementById("wagon").innerHTML = wagonNumber;
-    }          
+    }}}}
 )
-
 
 // event for the button cancel
 
@@ -69,4 +115,6 @@ btnGenerate.addEventListener("click",
         document.getElementById("wagon").innerHTML = "";
     }
 )
+
+
 
