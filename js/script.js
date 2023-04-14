@@ -7,6 +7,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
 });
 
 // let numeroFormattato = numero.toFixed(1);
+// how to change the alert format?
 
 alert("Hello, welcome to the train ticket generator. Please fill in the form to generate your ticket. Thank you!");
 
@@ -15,21 +16,17 @@ btnGenerate.addEventListener("click",
     
     function () {
         var passengerName = document.getElementById("name").value;
-        console.log("passenger name generation:", passengerName);
-
-        var age = document.getElementById("age").value;
-        console.log("age generation:", age);
-
-        var km = document.getElementById("km").value;
-        console.log("km distance generation:", km);
         
+        var age = document.getElementById("age").value;
+    
+        var km = document.getElementById("km").value;
+        
+        // ticket price calculation
         var ticketPrice = Math.floor(km * 0.21);
         var discount;
         var discountType;
-        console.log("full price ticket", ticketPrice);
-
-        // age discount
         
+        // age discount
         if (age == "Minor") {
             discount = ticketPrice * 0.2; 
             discountType = "Minor price";
@@ -43,17 +40,14 @@ btnGenerate.addEventListener("click",
 
         // ticket price
         var finalPrice = (ticketPrice - discount).toFixed(2);
-        console.log("Discount price:", discount);
-        console.log("Final ticket price:", finalPrice);
-        console.log("Discount type:", discountType);
-
+    
         // ticket section
         document.getElementById("passenger").innerHTML = passengerName;
         document.getElementById("discount").innerHTML = discountType;
         document.getElementById("ticket-price").innerHTML = finalPrice + "€";
 
         var wagonNumber = Math.floor(Math.random() * 9) + 1;
-        console.log("wagon number generator:", wagonNumber);
+        
         document.getElementById("wagon").innerHTML = wagonNumber;
     }          
 )
