@@ -1,5 +1,4 @@
 // Js train ticket 
-// event for the button generate 
 
 // prevent the form to be submitted
 document.querySelector('form').addEventListener('submit', function(event) {
@@ -100,7 +99,6 @@ btnGenerate.addEventListener("click",
 )
 
 // event for the button cancel
-
 var btnGenerate = document.getElementById("cancel");
 btnGenerate.addEventListener("click",
     function () {
@@ -116,5 +114,34 @@ btnGenerate.addEventListener("click",
     }
 )
 
+// Dark mode toggle
+const darkModeSwitch = document.getElementById('darkModeSwitch');
+const body = document.body;
+const icon = document.querySelector('.fa-solid');
 
+// Check local storage for dark mode preference
+if (localStorage.getItem('mydarkMode') === 'on') {
+    body.classList.add('mydarkMode');
+    darkModeSwitch.checked = true;
+    icon.classList.add('fa-white');
+} else {
+    body.classList.remove('mydarkMode');
+    darkModeSwitch.checked = false;
+    icon.classList.add('fa-black');
+}
+
+// Dark mode toggle event listener
+darkModeSwitch.addEventListener('click', () => {
+    if (darkModeSwitch.checked) {
+        body.classList.add('mydarkMode');
+        localStorage.setItem('mydarkMode', 'on');
+        icon.classList.remove('fa-black');
+        icon.classList.add('fa-white');
+    } else {
+        body.classList.remove('mydarkMode');
+        localStorage.setItem('mydarkMode', 'off');
+        icon.classList.remove('fa-white');
+        icon.classList.add('fa-black');
+    }
+});
 
