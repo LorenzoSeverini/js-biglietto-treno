@@ -12,17 +12,26 @@
 
     <!-- Train ticket generator  -->
     <div class="container">
-    
+        
         <!-- header  -->
         <header class="m-5">
-            <div class="navbar">
-                <div id="myLink" class="container-fluid justify-content-center">
-                    <a class="navbar-brand d-flex align-content-center" href="#">
-                        <i class="fa-solid fa-train fa-lg"></i>
-                    </a>
-                    <h1 class="text-center">
-                        <a href="#"></a>Train Ticket Generator
-                    </h1>
+            <!-- nav bar -->
+            <div class="navbar flex-nowrap">
+                <div class="container-fluid ">
+                    <div id="myLink" class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <i class="fa-solid fa-train fa-lg"></i>
+                        </a>
+                        <h1 class="d text-center">
+                            <a href="#"></a>Train Ticket Generator
+                        </h1>
+                    </div>
+
+                    <!-- switched dark mode -->
+                    <div class="form-check form-switch d-flex align-items-center gap-2">
+                        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                    </div>
                 </div>
             </div>
         </header>
@@ -61,24 +70,24 @@
         <!-- ticket generate section  -->
         <div class="container">
             <div class="row my-5">
-                <div class="col-12 col-md-12 col-lg-6 mx-auto bg-dark text-white rounded myCardEffect">
+                <div class="col-12 col-md-12 col-lg-6 mx-auto bg-success text-white rounded myCardEffect myCardBgColorDarnkMode">
                     <h2 class="my-4 text-center text-warning">Your ticket</h2>
                     <div class="d-flex justify-content-between my-5">
                         <div>
                             <h4>Passenger</h4>
-                            <p class="text-center text-danger" id="passenger"></p>
+                            <p class="text-center text-dark" id="passenger"></p>
                         </div>
                         <div>
                             <h4>Discount</h4>
-                            <p class="text-center text-danger" id="discount"></p>
+                            <p class="text-center text-dark" id="discount"></p>
                         </div>
                         <div>
                             <h4>Wagon</h4>
-                            <p class="text-center text-danger" id="wagon"></p>
+                            <p class="text-center text-dark" id="wagon"></p>
                         </div>
                         <div>
                             <h4>Ticket price</h4>
-                            <p class="text-center text-danger" id="ticket-price"></p>
+                            <p class="text-center text-dark" id="ticket-price"></p>
                         </div>
                     </div>    
                 </div>
