@@ -36,4 +36,16 @@ h1:hover {
     transition: all 0.3s;
 }
 
+/* Default styles */
+.myTextSize {
+    font-size: 1.25rem;
+}
+  
+  /* Media query for screens up to 767px wide */
+  @media (max-width: 34.375rem) {
+    .myTextSize {
+      font-size: .625rem;
+    }
+}
+  
   
